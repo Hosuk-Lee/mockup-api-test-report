@@ -1,0 +1,12 @@
+<!-- AspectJ에서 load-time weaving 사용 시 활성화를 위한 설정 -->
+<!-- aspect 들이 위치한 디렉토리와, 주입 대상 타켓들이 위치한 디렉토리를 include 한다 -->
+<aspectj>
+    <aspects>
+        <aspect name="hs.api.test.report.aspect.LogAspect"/>
+        <aspect name="hs.api.test.report.aspect.TestCaseAspect"/>
+        <weaver options="-verbose -showWeaveInfo -Xlint:ignore">
+<!--            <include within="hs.api.test.report.aspect.*"/>-->
+        </weaver>
+
+    </aspects>
+</aspectj>
